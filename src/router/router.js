@@ -1,12 +1,10 @@
-
-export default [
-    {
+export default [{
         path: '',
         redirect: '/home'
     },
     {
         path: '/home',
-        component: () => import('../views/home.vue')
+        component: () => import('@/views/home.vue')
     }
 
 ]
