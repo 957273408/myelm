@@ -9,15 +9,15 @@ import axios from "axios";
 // axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 
 let config = {
-  baseURL: "",
   timeout: 60 * 1000, // Timeout
   withCredentials: true, // Check cross-site Access-Control
 };
 if (process.env.NODE_ENV == 'development') {
-  config.baseURL = 'http://localhost:3000/';
+  // config.baseURL = '//elm.cangdu.org';
+  config.baseURL = '//elm.cangdu.org';
 
 } else if (process.env.NODE_ENV == 'production') {
-  config.baseURL = '';
+  config.baseURL = '//elm.cangdu.org';
 }
 const _axios = axios.create(config);
 
